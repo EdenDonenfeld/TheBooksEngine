@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        babyBlue: 'rgba(48, 176, 199, 0.15)', // Custom color
+        babyBlue: 'rgba(48, 176, 199, 0.20)', // Custom color
         darkerBlue: 'rgba(31, 157, 180, 0.75)', // Custom color
         recBlue: 'rgba(204, 220, 222, 1)', // Custom color
         borderBlue: 'rgba(31, 157, 180, 0.2)', // Custom color
