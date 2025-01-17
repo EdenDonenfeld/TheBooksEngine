@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSearchContext } from './SearchContext';
 import BookCard from './BookCard';
 
 const Search = () => {
-  const [searchValue, setSearchValue] = useState('');
+  const {
+    searchValue,
+    setSearchValue,
+    results,
+    setResults,
+    beforeSearch,
+    setBeforeSearch,
+  } = useSearchContext();
   const [isError, setIsError] = useState(false);
-  const [results, setResults] = useState([]);
-  const [beforeSearch, setBeforeSearch] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchResults = async () => {
@@ -39,6 +45,12 @@ const Search = () => {
     setBeforeSearch(false);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
     <main className="flex-1 flex flex-col items-center py-12 font-crimson">
       <p className="text-2xl text-black tracking-wider font-medium mb-6">
@@ -54,6 +66,7 @@ const Search = () => {
           placeholder="Search for books"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
+          onKeyDown={(e) => handleKeyDown(e)}
         />
         <button
           className="bg-darkerBlue text-white px-4 py-2 rounded-lg"

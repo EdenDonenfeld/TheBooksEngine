@@ -17,6 +17,6 @@
 }
 
 .input-error {
-  border-color: rgb(210, 48, 48); /* Highlight the error */
+  border-color: rgba(31, 157, 180, 0.2); /* Highlight the error */
   animation: vibrate 0.5s ease-in-out;
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import DOMPurify from 'dompurify';
 import Header from './Header';
 
 const BookDetails = () => {
@@ -66,14 +67,20 @@ const BookDetails = () => {
             <p>By {book.author}</p>
             {book.pages && <p>{book.pages} pages</p>}
             {book.publishedDate && <p>Published in {book.publishedDate}</p>}
-            {book.description && <p>{book.description}</p>}
+            {book.description && (
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(book.description),
+                }}
+              ></p>
+            )}
           </div>
         </div>
         <div className="flex justify-center">
           <img
             src={book.image}
             alt={book.title}
-            className="rounded-lg shadow-lg max-w-64 h-80 mt-4"
+            className="rounded-lg shadow-lg max-w-72 h-96 mt-4"
           />
         </div>
       </div>
