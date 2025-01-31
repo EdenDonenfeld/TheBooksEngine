@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/TheBooksEngine/static/css/main.5a4662fc.css",
+    "main.js": "/TheBooksEngine/static/js/main.aca28639.js",
+    "static/js/488.5dc00adb.chunk.js": "/TheBooksEngine/static/js/488.5dc00adb.chunk.js",
+    "static/media/logo-books.png": "/TheBooksEngine/static/media/logo-books.e87d22dc62adea514ce2.png",
+    "index.html": "/TheBooksEngine/index.html",
+    "main.5a4662fc.css.map": "/TheBooksEngine/static/css/main.5a4662fc.css.map",
+    "main.aca28639.js.map": "/TheBooksEngine/static/js/main.aca28639.js.map",
+    "488.5dc00adb.chunk.js.map": "/TheBooksEngine/static/js/488.5dc00adb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a4662fc.css",
+    "static/js/main.aca28639.js"
+  ]
+}
